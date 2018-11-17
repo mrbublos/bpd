@@ -1,0 +1,11 @@
+Installation:
+
+1.install maven/java 8
+2. run: mvn clean install
+3. run: generator-windows-amd64.exe | java -jar target/bpd.jar (on linux should work the same)
+4. access via web: http://localhost:8080/
+
+Improvements:
+1. Web api handling is not non-blocking, but i guess that was not the task (can be switched to selectors)
+2. More generic thread management for each pub/sub part, since theres a lot of common stuff, and hence boilerplate code
+3. More generic task, so lots of them can be chained and fine tuned without lots of effort, no separate thread for task management
